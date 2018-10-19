@@ -1,6 +1,13 @@
 ---
 version: '3'
 services:
-  main:
-    build: .
+  python3:
+    build:
+      context: .
+      dockerfile: Dockerfile.python3
     image: oaklabs/grpcio-tools:python3.7.0-1.15.0
+  python2:
+    build:
+      context: .
+      dockerfile: Dockerfile.python2
+    image: oaklabs/grpcio-tools:python2.7.15-1.15.0
